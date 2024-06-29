@@ -4,7 +4,8 @@ This repository contains the implementation and evaluation of various algorithmi
 ## Project Overview and Structure
 Algorithmic trading involves using computational models to automate the buying and selling of financial assets. This project explores the history of algorithmic trading, its objectives, data sources, and the implementation of several trading strategies.
 - Data: from Yahoo Finance
-- Notebooks: 2 notebooks, one with data analysis, preparation and traditional models and the other with the Reinforcement Learning approach.
+- Notebook 1 -> AXP_RandomForest
+- Notebook 2 -> AXP_QLearning
 
 ## Data
 The data used in this project is sourced from Yahoo Finance, focusing on the American Express Company (ticker: AXP) between 2019-01-01 and 2023-09-30. 
@@ -23,7 +24,7 @@ After loading there is 1195 rows and 7 columns. Each record corresponds to the d
 | Stock Splits  | Float | Number of times the stocks were split into smaller units        |
 
 ## Data Preparation
-The data preparation involves checking missing values and creation of trading indicators Moving Average and Moving Average Convergence/Divergence (MACD). It was created two columns in the dataset, one regarding the short moving average values of 25 days and the other the long moving average of 50 days.
+The data preparation involves checking missing values, creation of trading indicators Moving Average and Moving Average Convergence/Divergence (MACD), creation of new features like Daily Returns, Cumulative Returns and Signal (as target). It was also included lag features.
 
 ## Auxiliary Functions
 There were created auxiliary functions for efficiency, the explanation of each are present in the notebook.
@@ -46,8 +47,10 @@ Model 3 (MA) showed a cumulative return of 1.9068x with an expected mean return 
 The MACD strategy outperformed the MA strategy in terms of investment return, though it had lower precision, indicating higher risk. Both strategies exhibited similar volatility levels.
 
 ## Reinforcement Learning 
+In Reinforcement Learning there is an agent that learns by interacting with an environment in order to maximize the reward signal. Q-Learning is an RL value-based method that is used to supply information to an agent for an impending action. It is an off-policy algorithm allowing the agent to learn outside a policy by exploration.
+In this case, there is a trading agent that will maximize the reward signal in this case ROI (Return of Investment). 
 
-
+To be continued...
 
 
 
