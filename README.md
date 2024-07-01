@@ -77,7 +77,7 @@ As for the technical indicators for signal generating, it was calculated the fol
 ### Trading signals (BUY, SELL, HOLD)
 The generate_signals function calculates trading signals based on technical indicators to guide buy and sell decisions. It first computes the short-term (50-day) and long-term (200-day) moving averages, the Relative Strength Index (RSI), and Bollinger Bands from the closing prices. The default signal is set to 'HOLD'. Buy signals are generated when the short-term moving average is above the long-term moving average, the RSI is below 40, and the closing price is below the lower Bollinger Band. Conversely, sell signals are generated when the short-term moving average is below the long-term moving average, the RSI is above 60, and the closing price is above the upper Bollinger Band. The function updates the signals in the dataset and creates lists of entry (buy) and exit (sell) points. Finally, it returns dictionaries mapping these points to 'BUY' and 'SELL' actions, respectively. This process helps identify optimal trading times based on market conditions.
 
-## Defining Q-Leaning Classes
+## Defining Q-Learning Classes
 - Q-Learning Agent: Implements the Q-learning algorithm with methods for updating the Q-table, choosing actions based on epsilon-greedy policy, and saving/loading the Q-table.
 
 ### First Run of the algorithm
